@@ -336,6 +336,7 @@ impl<'de, 'a, 'py> DeserializeSeed<'de> for MarketDefinitionDeser<'a, 'py> {
         #[serde(field_identifier, rename_all = "camelCase")]
         enum Field {
             BetDelay,
+            BetDelayModels,
             BettingType,
             BspMarket,
             BspReconciled,
@@ -460,6 +461,9 @@ impl<'de, 'a, 'py> DeserializeSeed<'de> for MarketDefinitionDeser<'a, 'py> {
                         Field::BetDelay => {
                             upt.bet_delay = Some(map.next_value::<u16>()?);
                         }
+                        Field::BetDelayModels => {
+                            map.next_value::<serde::de::IgnoredAny>()?;
+                        }
                         Field::EventId => {
                             upt.event_id = Some(
                                 map.next_value::<&str>()?
@@ -563,6 +567,7 @@ impl<'de, 'a, 'py> DeserializeSeed<'de> for MarketDefinitionDeser<'a, 'py> {
             "runnersVoidable",
             "numberOfActiveRunners",
             "betDelay",
+            "betDelayModels",
             "status",
             "runners",
             "regulators",
