@@ -136,7 +136,6 @@ jobs:
 
     needs:
       - build-wheels
-      - build-sdist
       - test-wheel
 
     environment:
