@@ -5,7 +5,7 @@ Betfair Data is a very fast, Rust based, Betfair historical data parsing library
 ## Installation
 
 ```
-pip install betfair_data
+pip install betfair-data-smoothcinf
 ```
 
 Note: requires Python >= 3.7.

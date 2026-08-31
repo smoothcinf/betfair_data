@@ -7,6 +7,7 @@ name = "betfair-data-smoothcinf"
 requires-python = ">=3.7"
 version = "0.3.5"
 description = "Fast Python Betfair historic data file parser with updated Betfair Stream API support"
+readme = "README.md"
 
 authors = [
     { name = "Robert Tarbath", email = "rtarbath@gmail.com" }

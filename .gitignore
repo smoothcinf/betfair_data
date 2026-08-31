@@ -1,7 +1,7 @@
 /target
 /data
 /dist
-/.venv/lib/*
+/.venv/
 __pycache__
 *.tar
 *.exe
